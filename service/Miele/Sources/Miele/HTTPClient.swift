@@ -5,6 +5,10 @@
 //  Created by Stefano Martinallo on 21/07/2024.
 //
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 import Foundation
 
 public protocol HTTPClient {
