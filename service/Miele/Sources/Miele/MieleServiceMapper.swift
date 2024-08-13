@@ -5,6 +5,10 @@
 //  Created by Stefano Martinallo on 26/07/2024.
 //
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 import Foundation
 
 public final class MieleServiceMapper {
