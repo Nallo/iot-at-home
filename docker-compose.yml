@@ -1,0 +1,6 @@
+name: iot
+
+services:
+  api-service:
+    container_name: api-service
+    build: ./service
