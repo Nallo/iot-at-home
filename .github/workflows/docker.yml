@@ -18,3 +18,12 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag service-beta:$(date +%s)
+
+  build-whole-stack:
+
+    needs: build-service-image
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the whole stack (Service + Database)
+      run: docker compose build
