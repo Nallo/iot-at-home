@@ -25,5 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - name: List dir content
+      run: ls -la
     - name: Build the whole stack (Service + Database)
       run: docker compose build
